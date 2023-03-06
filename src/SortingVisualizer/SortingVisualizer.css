@@ -1,0 +1,25 @@
+body {
+    background-color: black;
+}
+
+.bars {
+    position: absolute;
+    left: 100px;
+    top: 20px;
+}
+
+.bar {
+    color: red;
+    background-color: red;
+    width: 2px;
+    display: inline-block;
+    margin: 0 1px;
+}
+
+.btn {
+    margin: 5px;
+}
+
+.sort-buttons {
+    margin: 20px 0px;
+}
