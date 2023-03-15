@@ -1,25 +1,49 @@
-function merge(left, right) {
-  let sortedArr = [];
+export const mergeSortSequence = (arr) => {
+  const swapSequence = [];
 
-  while (left.length && right.length) {
-    if (left[0] < right[0]) {
-      sortedArr.push(left.shift());
+  if (arr.length <= 1) return arr;
+
+  const auxArr = arr.slice();
+  mergeSortHelper(arr, 0, arr.length - 1, auxArr, swapSequence);
+
+  return swapSequence;
+};
+
+function mergeSortHelper(arr, lo, hi, auxArr, swapSequence) {
+  if (lo === hi) return;
+  const mid = Math.floor((lo + hi) / 2);
+  mergeSortHelper(auxArr, lo, mid, arr, swapSequence);
+  mergeSortHelper(auxArr, mid + 1, hi, arr, swapSequence);
+  merge(arr, lo, mid, hi, auxArr, swapSequence);
+}
+
+function merge(arr, lo, mid, hi, auxArr, swapSequence) {
+  let i = lo;
+  let j = mid + 1;
+  let k = lo;
+
+  while (i <= mid && j <= hi) {
+    swapSequence.push([i, j]);
+    swapSequence.push([i, j]);
+    if (auxArr[i] <= auxArr[j]) {
+      swapSequence.push([k, auxArr[i]]);
+      arr[k++] = auxArr[i++];
     } else {
-      sortedArr.push(right.shift());
+      swapSequence.push([k, auxArr[j]]);
+      arr[k++] = auxArr[j++];
     }
   }
 
-  // Spread operators create new array, combining all three
-  return [...sortedArr, ...left, ...right];
+  while (i <= mid) {
+    swapSequence.push([i, i]);
+    swapSequence.push([i, i]);
+    swapSequence.push([k, auxArr[i]]);
+    arr[k++] = auxArr[i++];
+  }
+  while (j <= hi) {
+    swapSequence.push([j, j]);
+    swapSequence.push([j, j]);
+    swapSequence.push([k, auxArr[j]]);
+    arr[k++] = auxArr[j++];
+  }
 }
-
-export const mergeSort = (arr) => {
-  if (arr.length <= 1) return arr;
-
-  let mid = Math.floor(arr.length / 2);
-
-  let left = mergeSort(arr.slice(0, mid));
-  let right = mergeSort(arr.slice(mid));
-
-  return merge(left, right);
-};

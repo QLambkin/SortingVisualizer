@@ -1,5 +1,12 @@
 import React from "react";
+import { mergeSortSequence } from "../SortingAlgorithms/MergeSort";
 import "./SortingVisualizer.css";
+
+const MAIN_COLOR = "red";
+
+const SWAP_COLOR = "yellow";
+
+const SPEED = 5;
 
 function randInt(min, max) {
   return Math.floor(Math.random() * (max - min) + 1);
@@ -34,13 +41,41 @@ export default class SortingVisualizer extends React.Component {
   // O(n) space
   // Sorts Large Arrays quickly
   // Stable Sort
-  mergeSort = () => {}
+  mergeSort = () => {
+    const swapSequence = mergeSortSequence(this.state.array);
 
-  quickSort = () => {}
+    for (let i = 0; i < swapSequence.length; i++) {
+      const barsArray = document.getElementsByClassName('bar');
+      const changeColor = i % 3 !== 2;
 
-  heapSort = () => {}
+      if (changeColor) {
+        const [firstBarIdx, secBarIdx] = swapSequence[i];
+        console.log(firstBarIdx);
+        console.log(secBarIdx);
+        const firstBarStyle = barsArray[firstBarIdx].style;
+        const secBarStyle = barsArray[secBarIdx].style;
+        // console.log(secBarStyle);
+        const color = i % 3 === 0 ? SWAP_COLOR : MAIN_COLOR;
 
-  bubbleSort = () => {}
+        setTimeout(() => {
+          firstBarStyle.backgroundColor = color;
+          secBarStyle.backgroundColor = color;
+        }, i * SPEED);
+      } else {
+        setTimeout(() => {
+          const [firstBarIdx, newHeight] = swapSequence[i];
+          const firstBarStyle = barsArray[firstBarIdx].style;
+          firstBarStyle.height = `${newHeight}px`;
+        }, i * SPEED);
+      }
+    }
+  };
+
+  quickSort = () => {};
+
+  heapSort = () => {};
+
+  bubbleSort = () => {};
 
   render() {
     const { array } = this.state;
@@ -52,19 +87,31 @@ export default class SortingVisualizer extends React.Component {
             className="bar"
             key={idx}
             style={{
+              backgroundColor: MAIN_COLOR,
               height: `${value}px`,
             }}
           ></div>
         ))}
 
         <div className="sort-buttons">
-          <button className="btn rand-btn" onClick={() => this.randomizeArray()}>
+          <button
+            className="btn rand-btn"
+            onClick={() => this.randomizeArray()}
+          >
             <i className="fa-solid fa-shuffle"></i>
           </button>
-          <button className="btn" onClick={() => this.mergeSort()}>Merge Sort</button>
-          <button className="btn" onClick={() => this.quickSort()}>Quick Sort</button>
-          <button className="btn" onClick={() => this.heapSort()}>Heap Sort</button>
-          <button className="btn" onClick={() => this.bubbleSort()}>Bubble Sort</button>
+          <button className="btn" onClick={() => this.mergeSort()}>
+            Merge Sort
+          </button>
+          <button className="btn" onClick={() => this.quickSort()}>
+            Quick Sort
+          </button>
+          <button className="btn" onClick={() => this.heapSort()}>
+            Heap Sort
+          </button>
+          <button className="btn" onClick={() => this.bubbleSort()}>
+            Bubble Sort
+          </button>
         </div>
       </div>
     );
