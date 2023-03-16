@@ -34,12 +34,15 @@ function merge(arr, lo, mid, hi, auxArr, swapSequence) {
     }
   }
 
+  // j is finished, push the rest of i
   while (i <= mid) {
     swapSequence.push([i, i]);
     swapSequence.push([i, i]);
     swapSequence.push([k, auxArr[i]]);
     arr[k++] = auxArr[i++];
   }
+
+  // i is finished, push the rest of j
   while (j <= hi) {
     swapSequence.push([j, j]);
     swapSequence.push([j, j]);
