@@ -50,11 +50,8 @@ export default class SortingVisualizer extends React.Component {
 
       if (changeColor) {
         const [firstBarIdx, secBarIdx] = swapSequence[i];
-        console.log(firstBarIdx);
-        console.log(secBarIdx);
         const firstBarStyle = barsArray[firstBarIdx].style;
         const secBarStyle = barsArray[secBarIdx].style;
-        // console.log(secBarStyle);
         const color = i % 3 === 0 ? SWAP_COLOR : MAIN_COLOR;
 
         setTimeout(() => {
