@@ -69,7 +69,7 @@ export default class SortingVisualizer extends React.Component {
   };
 
   quickSort = () => {};
-
+ 
   heapSort = () => {};
 
   bubbleSort = () => {};
