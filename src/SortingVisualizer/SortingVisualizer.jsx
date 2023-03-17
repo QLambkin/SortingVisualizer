@@ -94,7 +94,7 @@ export default class SortingVisualizer extends React.Component {
           <button
             className="btn rand-btn"
             onClick={() => this.randomizeArray()}
-          >
+          > 
             <i className="fa-solid fa-shuffle"></i>
           </button>
           <button className="btn" onClick={() => this.mergeSort()}>
