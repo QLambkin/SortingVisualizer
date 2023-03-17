@@ -6,7 +6,7 @@ const MAIN_COLOR = "red";
 
 const SWAP_COLOR = "yellow";
 
-const SPEED = 5;
+const SPEED = 1;
 
 function randInt(min, max) {
   return Math.floor(Math.random() * (max - min) + 1);
@@ -45,7 +45,7 @@ export default class SortingVisualizer extends React.Component {
     const swapSequence = mergeSortSequence(this.state.array);
 
     for (let i = 0; i < swapSequence.length; i++) {
-      const barsArray = document.getElementsByClassName('bar');
+      const barsArray = document.getElementsByClassName("bar");
       const changeColor = i % 3 !== 2;
 
       if (changeColor) {
@@ -69,7 +69,7 @@ export default class SortingVisualizer extends React.Component {
   };
 
   quickSort = () => {};
- 
+
   heapSort = () => {};
 
   bubbleSort = () => {};
@@ -92,23 +92,23 @@ export default class SortingVisualizer extends React.Component {
 
         <div className="sort-buttons">
           <button
-            className="btn rand-btn"
+            id="rand-btn"
             onClick={() => this.randomizeArray()}
-          > 
+          >
             <i className="fa-solid fa-shuffle"></i>
           </button>
-          <button className="btn" onClick={() => this.mergeSort()}>
+          <button onClick={() => this.mergeSort()}>
             Merge Sort
           </button>
-          <button className="btn" onClick={() => this.quickSort()}>
+          {/* <button onClick={() => this.quickSort()}>
             Quick Sort
           </button>
-          <button className="btn" onClick={() => this.heapSort()}>
+          <button onClick={() => this.heapSort()}>
             Heap Sort
           </button>
-          <button className="btn" onClick={() => this.bubbleSort()}>
+          <button onClick={() => this.bubbleSort()}>
             Bubble Sort
-          </button>
+          </button> */}
         </div>
       </div>
     );
