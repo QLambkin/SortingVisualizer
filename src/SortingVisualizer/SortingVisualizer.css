@@ -1,5 +1,21 @@
 body {
-  background-color: black;
+  /* background-color: #000000;
+  background-image: url("https://www.transparenttextures.com/patterns/axiom-pattern.png"); */
+
+  /* background-color: #000000;
+  background-image: url("https://www.transparenttextures.com/patterns/bo-play.png"); */
+
+  /* background-color: #000000;
+  background-image: url("https://www.transparenttextures.com/patterns/cross-stripes.png"); */
+
+  /* background-color: #000000;
+  background-image: url("https://www.transparenttextures.com/patterns/diagmonds.png"); */
+
+  /* background-color: #000000;
+  background-image: url("https://www.transparenttextures.com/patterns/lined-paper-2.png"); */
+
+  background-color: #000000;
+  background-image: url("https://www.transparenttextures.com/patterns/white-wall-3-2.png");
 }
 
 .bars {
@@ -15,25 +31,25 @@ body {
 }
 
 .sort-buttons {
-    margin-top: 5vmin;
-    display: flex;
-    justify-content: space-around;
-    padding: 0vmin 50vmin;
+  margin-top: 5vmin;
+  display: flex;
+  justify-content: space-around;
+  padding: 0vmin 50vmin;
 }
 
 .sort-buttons > button {
-    font-size: 2.5vmin;
-    color: white;
-    border: 0.4vmin solid red;
-    border-radius: 100%;
-    background-color: transparent;
-    height: 7vmin;
-    width: 7vmin;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+  font-size: 3vmin;
+  color: white;
+  border: 0.4vmin solid red;
+  border-radius: 100%;
+  background-color: transparent;
+  height: 7vmin;
+  width: 7vmin;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 #rand-btn {
   color: red;
