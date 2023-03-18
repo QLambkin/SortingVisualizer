@@ -6,7 +6,7 @@ const MAIN_COLOR = "red";
 
 const SWAP_COLOR = "yellow";
 
-const SPEED = 1;
+const SPEED = 1; 
 
 function randInt(min, max) {
   return Math.floor(Math.random() * (max - min) + 1);
