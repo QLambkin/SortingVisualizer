@@ -2,11 +2,13 @@ import React from "react";
 import { mergeSortSequence } from "../SortingAlgorithms/MergeSort";
 import "./SortingVisualizer.css";
 
-const MAIN_COLOR = "red";
+// const MAIN_COLOR = "red";
 
 const SWAP_COLOR = "yellow";
 
-const SPEED = 5;
+const GRADIENT = 3;
+
+const SPEED = 1;
 
 function randInt(min, max) {
   return Math.floor(Math.random() * (max - min) + 1);
@@ -52,17 +54,19 @@ export default class SortingVisualizer extends React.Component {
         const [firstBarIdx, secBarIdx] = swapSequence[i];
         const firstBarStyle = barsArray[firstBarIdx].style;
         const secBarStyle = barsArray[secBarIdx].style;
-        const color = i % 3 === 0 ? SWAP_COLOR : MAIN_COLOR;
+        const firstColor = i % 3 === 0 ? SWAP_COLOR : barsArray[firstBarIdx].style.backgroundColor;
+        const secColor = i % 3 === 0 ? SWAP_COLOR : barsArray[secBarIdx].style.backgroundColor;
 
-        setTimeout(() => {
-          firstBarStyle.backgroundColor = color;
-          secBarStyle.backgroundColor = color;
-        }, i * SPEED);
+        // setTimeout(() => {
+        //   firstBarStyle.backgroundColor = firstColor;
+        //   secBarStyle.backgroundColor = secColor;
+        // }, i * SPEED);
       } else {
         setTimeout(() => {
           const [firstBarIdx, newHeight] = swapSequence[i];
           const firstBarStyle = barsArray[firstBarIdx].style;
           firstBarStyle.height = `${newHeight}px`;
+          firstBarStyle.backgroundColor = `rgb(255, ${newHeight / GRADIENT}, ${newHeight / GRADIENT})`
         }, i * SPEED);
       }
     }
@@ -85,8 +89,8 @@ export default class SortingVisualizer extends React.Component {
             key={idx}
             style={{
               // backgroundColor: MAIN_COLOR,
-              // "background-color": `rgb(255, ${idx / 1.5}, ${idx / 1.5})`,
-              "background-color": `rgb(255, ${idx / 2}, 0)`, // Yellow doesnt show well when comparing bars
+              "background-color": `rgb(255, ${value / GRADIENT}, ${value / GRADIENT})`,
+              // "background-color": `rgb(255, ${value / 2.5}, 0)`, // Yellow doesnt show well when comparing bars
               height: `${value}px`,
             }}
           ></div>
