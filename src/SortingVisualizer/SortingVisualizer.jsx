@@ -6,7 +6,7 @@ const MAIN_COLOR = "red";
 
 const SWAP_COLOR = "yellow";
 
-const SPEED = 5; 
+const SPEED = 5;
 
 function randInt(min, max) {
   return Math.floor(Math.random() * (max - min) + 1);
@@ -84,21 +84,19 @@ export default class SortingVisualizer extends React.Component {
             className="bar"
             key={idx}
             style={{
-              backgroundColor: MAIN_COLOR,
+              // backgroundColor: MAIN_COLOR,
+              // "background-color": `rgb(255, ${idx / 1.5}, ${idx / 1.5})`,
+              "background-color": `rgb(255, ${idx / 2}, 0)`,
               height: `${value}px`,
             }}
           ></div>
         ))}
 
         <div className="sort-buttons">
-          <button
-            onClick={() => this.randomizeArray()}
-          >
+          <button onClick={() => this.randomizeArray()}>
             <i className="fa-solid fa-shuffle"></i>
           </button>
-          <button onClick={() => this.mergeSort()}>
-            Merge Sort
-          </button>
+          <button onClick={() => this.mergeSort()}>Merge Sort</button>
           {/* <button onClick={() => this.quickSort()}>
             Quick Sort
           </button>
