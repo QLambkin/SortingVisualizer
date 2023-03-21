@@ -86,7 +86,7 @@ export default class SortingVisualizer extends React.Component {
             style={{
               // backgroundColor: MAIN_COLOR,
               // "background-color": `rgb(255, ${idx / 1.5}, ${idx / 1.5})`,
-              "background-color": `rgb(255, ${idx / 2}, 0)`,
+              "background-color": `rgb(255, ${idx / 2}, 0)`, // Yellow doesnt show well when comparing bars
               height: `${value}px`,
             }}
           ></div>
