@@ -56,6 +56,7 @@ export default class SortingVisualizer extends React.Component {
         const secBarStyle = barsArray[secBarIdx].style;
         const firstColor = i % 3 === 0 ? SWAP_COLOR : barsArray[firstBarIdx].style.backgroundColor;
         const secColor = i % 3 === 0 ? SWAP_COLOR : barsArray[secBarIdx].style.backgroundColor;
+        // console.log(secBarIdx)
 
         // setTimeout(() => {
         //   firstBarStyle.backgroundColor = firstColor;
@@ -66,7 +67,7 @@ export default class SortingVisualizer extends React.Component {
           const [firstBarIdx, newHeight] = swapSequence[i];
           const firstBarStyle = barsArray[firstBarIdx].style;
           firstBarStyle.height = `${newHeight}px`;
-          firstBarStyle.backgroundColor = `rgb(255, ${newHeight / GRADIENT}, ${newHeight / GRADIENT})`
+          firstBarStyle.backgroundColor = `rgb(255, ${newHeight / GRADIENT}, ${newHeight / GRADIENT})`;
         }, i * SPEED);
       }
     }
