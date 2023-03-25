@@ -95,9 +95,7 @@ export default class SortingVisualizer extends React.Component {
             key={idx}
             style={{
               // backgroundColor: MAIN_COLOR,
-              "background-color": `rgb(255, ${value / GRADIENT}, ${
-                value / GRADIENT
-              })`,
+              "background-color": `rgb(255, ${value / GRADIENT}, ${value / GRADIENT})`,
               // "background-color": `rgb(255, ${value / 2.5}, 0)`, // Yellow doesnt show well when comparing bars
               height: `${value}px`,
             }}
@@ -105,15 +103,21 @@ export default class SortingVisualizer extends React.Component {
         ))}
 
         <div className="sort-buttons">
-          <div className="rand-button btn-svg" onClick={() => this.randomizeArray()}>
+          <div
+            className="rand-button btn-svg"
+            onClick={() => this.randomizeArray()}
+          >
             <svg>
-              <circle cx="29" cy="30" r="30" />
+              <circle cx="45" cy="45" r="45" />
             </svg>
             <i className="fa-solid fa-shuffle"></i>
           </div>
-          <div className="merge-button btn-svg" onClick={() => this.mergeSort()}>
+          <div
+            className="merge-button btn-svg"
+            onClick={() => this.mergeSort()}
+          >
             <svg>
-              <circle cx="29" cy="30" r="30" />
+              <circle cx="45" cy="45" r="45" />
             </svg>
             Merge Sort
           </div>
