@@ -129,7 +129,7 @@ export default class SortingVisualizer extends React.Component {
               Merge Sort
             </div>
 
-            <div
+            {/* <div
               className="merge-button btn-svg"
               onClick={() => this.quickSort()}
             >
@@ -137,7 +137,7 @@ export default class SortingVisualizer extends React.Component {
                 <circle cx="45" cy="45" r="45" />
               </svg>
               Quick Sort
-            </div>
+            </div> */}
 
             {/* <div
               className="merge-button btn-svg"
