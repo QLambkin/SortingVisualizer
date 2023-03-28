@@ -8,7 +8,7 @@ import "./SortingVisualizer.scss";
 
 const GRADIENT = 3;
 
-const SPEED = 1;
+const SPEED = 30;
 
 function randInt(min, max) {
   return Math.floor(Math.random() * (max - min) + 1);

@@ -94,8 +94,8 @@ body {
 
   circle {
     stroke-width: 5;
-    stroke-dasharray: 15, 310;
-    stroke-dashoffset: 263;
+    stroke-dasharray: 30, 310;
+    stroke-dashoffset: 285;
     transition: all 1.3s cubic-bezier(0.19, 1, 0.22, 1);
   }
 }
