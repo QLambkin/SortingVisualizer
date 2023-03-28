@@ -10,7 +10,7 @@ import "./SortingVisualizer.scss";
 const GRADIENT = 3;
 
 // Controls the speed of the animation 
-const SPEED = 30;
+const SPEED = 1;
 
 function randInt(min, max) {
   return Math.floor(Math.random() * (max - min) + 1);
@@ -129,7 +129,7 @@ export default class SortingVisualizer extends React.Component {
               Merge Sort
             </div>
 
-            {/* <div
+            <div
               className="merge-button btn-svg"
               onClick={() => this.quickSort()}
             >
@@ -139,7 +139,7 @@ export default class SortingVisualizer extends React.Component {
               Quick Sort
             </div>
 
-            <div
+            {/* <div
               className="merge-button btn-svg"
               onClick={() => this.heapSort()}
             >
