@@ -4,7 +4,7 @@ import "./SortingVisualizer.scss";
 
 // const MAIN_COLOR = "red";
 
-// const SWAP_COLOR = "yellow";
+// const SWAP_COLOR = "yellow"; 
 
 // Used to divide the height of the bar to find its appropriate shade 
 const GRADIENT = 3;
