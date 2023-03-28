@@ -88,40 +88,43 @@ export default class SortingVisualizer extends React.Component {
     const { array } = this.state;
 
     return (
-      <div className="bars">
-        {array.map((value, idx) => (
-          <div
-            className="bar"
-            key={idx}
-            style={{
-              // backgroundColor: MAIN_COLOR,
-              "background-color": `rgb(255, ${value / GRADIENT}, ${value / GRADIENT})`,
-              // "background-color": `rgb(255, ${value / 2.5}, 0)`, // Yellow doesnt show well when comparing bars
-              height: `${value}px`,
-            }}
-          ></div>
-        ))}
+      <>
+        <div className="bars">
+          {array.map((value, idx) => (
+            <div
+              className="bar"
+              key={idx}
+              style={{
+                // backgroundColor: MAIN_COLOR,
+                "background-color": `rgb(255, ${value / GRADIENT}, ${
+                  value / GRADIENT
+                })`,
+                // "background-color": `rgb(255, ${value / 2.5}, 0)`, // Yellow doesnt show well when comparing bars
+                height: `${value}px`,
+              }}
+            ></div>
+          ))}
 
-        <div className="sort-buttons">
-          <div
-            className="rand-button btn-svg"
-            onClick={() => this.randomizeArray()}
-          >
-            <svg>
-              <circle cx="45" cy="45" r="45" />
-            </svg>
-            <i className="fa-solid fa-shuffle"></i>
-          </div>
-          <div
-            className="merge-button btn-svg"
-            onClick={() => this.mergeSort()}
-          >
-            <svg>
-              <circle cx="45" cy="45" r="45" />
-            </svg>
-            Merge Sort
-          </div>
-          {/* <button onClick={() => this.quickSort()}>
+          <div className="sort-buttons">
+            <div
+              className="rand-button btn-svg"
+              onClick={() => this.randomizeArray()}
+            >
+              <svg>
+                <circle cx="45" cy="45" r="45" />
+              </svg>
+              <i className="fa-solid fa-shuffle"></i>
+            </div>
+            <div
+              className="merge-button btn-svg"
+              onClick={() => this.mergeSort()}
+            >
+              <svg>
+                <circle cx="45" cy="45" r="45" />
+              </svg>
+              Merge Sort
+            </div>
+            {/* <button onClick={() => this.quickSort()}>
             Quick Sort
           </button>
           <button onClick={() => this.heapSort()}>
@@ -130,8 +133,9 @@ export default class SortingVisualizer extends React.Component {
           <button onClick={() => this.bubbleSort()}>
             Bubble Sort
           </button> */}
+          </div>
         </div>
-      </div>
+      </>
     );
   }
 }

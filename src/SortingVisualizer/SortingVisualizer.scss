@@ -53,7 +53,7 @@ body {
 }
 
 .btn-svg {
-  font-size: 3vmin;
+  font-size: 2.5vmin;
   color: rgb(255, 255, 255);
   // border: 0.4vmin solid red;
   border-radius: 100%;
@@ -69,13 +69,16 @@ body {
   transition-property: all;
   transition-duration: 0.6s;
   transition-timing-function: ease;
+  
 
   svg {
-    height: 80px;
+    height: 50px;
     left: 0;
     position: absolute;
     top: 0;
-    // width: 200%;
+    overflow: visible;
+    padding: 0;
+    width: 50px;
   }
 
   circle {
