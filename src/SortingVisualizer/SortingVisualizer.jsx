@@ -6,7 +6,7 @@ import "./SortingVisualizer.scss";
 
 // const SWAP_COLOR = "yellow";
 
-// Used to divide the height of the bar to find its appropriate shade
+// Used to divide the height of the bar to find its appropriate shade 
 const GRADIENT = 3;
 
 // Controls the speed of the animation 
