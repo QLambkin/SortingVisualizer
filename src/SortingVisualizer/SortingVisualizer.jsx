@@ -2,7 +2,7 @@ import React from "react";
 import { mergeSortSequence } from "../SortingAlgorithms/MergeSort";
 import "./SortingVisualizer.scss";
 
-// const MAIN_COLOR = "red";
+// const MAIN_COLOR = "red"; 
 
 // const SWAP_COLOR = "yellow"; 
 
