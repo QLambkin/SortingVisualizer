@@ -55,7 +55,6 @@ body {
 .btn-svg {
   font-size: 2.5vmin;
   color: rgb(255, 255, 255);
-  // border: 0.4vmin solid red;
   border-radius: 100%;
   background-color: transparent;
   height: 10vmin;
@@ -65,11 +64,10 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
-  // padding: 2vw;
+
   transition-property: all;
   transition-duration: 0.6s;
   transition-timing-function: ease;
-  
 
   svg {
     height: 50px;
@@ -85,25 +83,30 @@ body {
     fill: none;
     stroke: red;
     stroke-width: 3;
-    stroke-dasharray: 422, 0;
+    stroke-dasharray: 455, 0;
     transition: all 0.5s linear;
   }
 }
 
 .btn-svg:hover {
   // background: rgba($red, 0);
-  font-weight: 900;
+  font-weight: 600;
   letter-spacing: 1px;
 
   circle {
     stroke-width: 5;
-    stroke-dasharray: 5, 15;
-    stroke-dashoffset: 48;
-    transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+    stroke-dasharray: 15, 310;
+    stroke-dashoffset: 263;
+    transition: all 1.3s cubic-bezier(0.19, 1, 0.22, 1);
   }
 }
 
-// #rand-btn {
-//   color: red;
-//   border: 0.4vmin solid white;
-// }
+#rand-btn {
+  color: red;
+  font-size: 4vmin;
+  margin-right: 5vmin;
+
+  circle {
+    stroke: rgb(255, 255, 255);
+  }
+}

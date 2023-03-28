@@ -107,7 +107,8 @@ export default class SortingVisualizer extends React.Component {
 
           <div className="sort-buttons">
             <div
-              className="rand-button btn-svg"
+              className="btn-svg"
+              id="rand-btn"
               onClick={() => this.randomizeArray()}
             >
               <svg>
@@ -115,6 +116,7 @@ export default class SortingVisualizer extends React.Component {
               </svg>
               <i className="fa-solid fa-shuffle"></i>
             </div>
+
             <div
               className="merge-button btn-svg"
               onClick={() => this.mergeSort()}
@@ -124,15 +126,36 @@ export default class SortingVisualizer extends React.Component {
               </svg>
               Merge Sort
             </div>
-            {/* <button onClick={() => this.quickSort()}>
-            Quick Sort
-          </button>
-          <button onClick={() => this.heapSort()}>
-            Heap Sort
-          </button>
-          <button onClick={() => this.bubbleSort()}>
-            Bubble Sort
-          </button> */}
+
+            {/* <div
+              className="merge-button btn-svg"
+              onClick={() => this.quickSort()}
+            >
+              <svg>
+                <circle cx="45" cy="45" r="45" />
+              </svg>
+              Quick Sort
+            </div>
+
+            <div
+              className="merge-button btn-svg"
+              onClick={() => this.heapSort()}
+            >
+              <svg>
+                <circle cx="45" cy="45" r="45" />
+              </svg>
+              Heap Sort
+            </div>
+
+            <div
+              className="merge-button btn-svg"
+              onClick={() => this.bubbleSort()}
+            >
+              <svg>
+                <circle cx="45" cy="45" r="45" />
+              </svg>
+              Bubble Sort
+            </div> */}
           </div>
         </div>
       </>
