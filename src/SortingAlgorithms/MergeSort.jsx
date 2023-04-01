@@ -20,7 +20,7 @@ function mergeSortHelper(arr, lo, hi, auxArr, swapSequence) {
 function merge(arr, lo, mid, hi, auxArr, swapSequence) {
   let i = lo;
   let j = mid + 1;
-  let k = lo;
+  let k = lo; 
  
   while (i <= mid && j <= hi) {
     swapSequence.push([i, j]);
