@@ -22,7 +22,7 @@ function merge(arr, lo, mid, hi, auxArr, swapSequence) {
   let j = mid + 1;
   let k = lo; 
  
-  while (i <= mid && j <= hi) { 
+  while (i <= mid && j <= hi) {  
     swapSequence.push([i, j]);
     swapSequence.push([i, j]);
     if (auxArr[i] <= auxArr[j]) {
