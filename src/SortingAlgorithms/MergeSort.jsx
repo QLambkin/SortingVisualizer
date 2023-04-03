@@ -8,7 +8,7 @@ export const mergeSortSequence = (arr) => {
 
   return swapSequence;
 };
-
+ 
 function mergeSortHelper(arr, lo, hi, auxArr, swapSequence) {
   if (lo === hi) return;
   const mid = Math.floor((lo + hi) / 2);
